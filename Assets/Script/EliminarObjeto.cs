@@ -11,6 +11,11 @@ public class EliminarObjeto : MonoBehaviour
 		pos_mouse = Vector3.right;
 
 	} 
+
+	void OnBecameInvisible()
+	{
+		Destroy ( gameObject );
+	}
 	
 	// Update is called once per frame
 	void Update () 
@@ -24,7 +29,8 @@ public class EliminarObjeto : MonoBehaviour
 			{	
 				if ((transform.position.y <= pos_mouse.y+0.1) && (transform.position.y >= pos_mouse.y-0.1)) 
 				{
-					gameObject.SetActive (false);
+					//gameObject.SetActive (false);
+					DestroyObject( gameObject );
 				}
 			}
 		}

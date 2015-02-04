@@ -13,6 +13,11 @@ public class StartGame : MonoBehaviour {
 
 	void Update()
 	{
+		GameObject device = GameObject.FindGameObjectsWithTag ("Device");
+
+
+
+
 		Vector3 moveToward = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		mouse_position = moveToward;
 

@@ -23,6 +23,11 @@ public class ControlarDispositivo : MonoBehaviour {
 		pos_mouse = Vector3.right;
 		condicao = 0;
 	}
+
+	void OnTriggerEnter2D()
+	{
+
+	}
 	
 	// Update is called once per frame
 	void Update () 
