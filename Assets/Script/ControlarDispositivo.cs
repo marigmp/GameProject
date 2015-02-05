@@ -15,6 +15,7 @@ public class ControlarDispositivo : MonoBehaviour {
 	private Vector3 pos_corrente;
 	private Vector3 posicaoinicial;
 
+	private int countWin = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -24,9 +25,20 @@ public class ControlarDispositivo : MonoBehaviour {
 		condicao = 0;
 	}
 
-	void OnTriggerEnter2D()
+	void OnTriggerEnter2D( Collider2D other )
 	{
+		Debug.Log ("Hey");
 
+		if(other.CompareTag("bact"))
+		{
+			//Invoke ("destroyBact", 3f);			
+			DestroyObject(other.gameObject);
+			//Debug.Log("colisao bacterias");
+			countWin++;
+
+			if(countWin >= 5)
+				Application.LoadLevel("winScene");
+		}
 	}
 	
 	// Update is called once per frame

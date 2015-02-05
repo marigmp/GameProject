@@ -16,10 +16,17 @@ public class EliminarObjeto : MonoBehaviour
 	{
 		Destroy ( gameObject );
 	}
+
+	void EliminateBacteria() 
+	{
+		DestroyObject (gameObject);
+	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		//GameObject device = GameObject.FindGameObjectsWithTag ("device");
+
 		Vector3 moveToward1 = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		pos_mouse = moveToward1;
 		pos_mouse.z = 0; 
