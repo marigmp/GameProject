@@ -18,9 +18,9 @@ public class BactsCreator : MonoBehaviour {
 	{
 		//Camera camera = Camera.main;
 		GameObject mouth = GameObject.Find ("mouth");
-		var renderer = mouth.GetComponent<Renderer> ();
-		float width = renderer.bounds.size.x;
-		float height = renderer.bounds.size.y;
+		//var renderer = mouth.GetComponent<Renderer> ();
+		/*float width = renderer.bounds.size.x;
+		float height = renderer.bounds.size.y;*/
 
 		//Debug.Log ("Width: " + width + ", Height: " + height);
 
