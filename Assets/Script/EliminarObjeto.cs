@@ -28,6 +28,7 @@ public class EliminarObjeto : MonoBehaviour
 		//GameObject device = GameObject.FindGameObjectsWithTag ("device");
 
 		Vector3 moveToward1 = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		GameObject[] device = GameObject.FindGameObjectsWithTag("device");
 		pos_mouse = moveToward1;
 		pos_mouse.z = 0; 
 		if (Input.GetKeyDown(KeyCode.Space)) 
