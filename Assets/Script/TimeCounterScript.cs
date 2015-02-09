@@ -17,7 +17,11 @@ public class TimeCounterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GameObject bacts_factory = GameObject.Find ("bact");
+		if (bacts_factory != null) 
+		{
 
+		}
 	}
 
 	void OnGUI()

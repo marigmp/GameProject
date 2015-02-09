@@ -46,9 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\BackToLaunch.cs" />
      <Compile Include="Assets\Script\BactsCreator.cs" />
      <Compile Include="Assets\Script\ControlarDispositivo.cs" />
      <Compile Include="Assets\Script\EliminarObjeto.cs" />
+     <Compile Include="Assets\Script\HelpButton.cs" />
      <Compile Include="Assets\Script\PosicionarCameraZoom.cs" />
      <Compile Include="Assets\Script\StartGame.cs" />
      <Compile Include="Assets\Script\TimeCounterScript.cs" />

@@ -14,7 +14,7 @@ public class BactsCreator : MonoBehaviour {
 		Invoke("SpawnBacts",minSpawnTime);
 	}
 	
-	void SpawnBacts()
+	public void SpawnBacts()
 	{
 		//Camera camera = Camera.main;
 		GameObject mouth = GameObject.Find ("mouth");
