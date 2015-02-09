@@ -9,6 +9,8 @@ public class TimeCounterScript : MonoBehaviour {
 	private int minutes;
 	private int seconds;
 
+	private bool displayLabel = false;
+
 	// Use this for initialization
 	void Start () {
 		totalTime = 0f;
@@ -17,11 +19,7 @@ public class TimeCounterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject bacts_factory = GameObject.Find ("bact");
-		if (bacts_factory != null) 
-		{
-
-		}
+		
 	}
 
 	void OnGUI()
@@ -31,7 +29,28 @@ public class TimeCounterScript : MonoBehaviour {
 		minutes = Mathf.FloorToInt ((totalTime - 3600 * hour) / 60);
 		seconds = Mathf.FloorToInt (totalTime-hour * 3600 - minutes * 60);
 
+		if(EliminarObjeto.device_erro) 
+		{			
+			if(displayLabel) {
+				GUI.Label (new Rect(700, 15, 100, 50), "YOU LOST TIME!");
+				flashLabel();
+			}
+		}
+
 		GUI.Label (new Rect(700, 0, 100, 50), "" + hour  + ":" + minutes + ":" + seconds);
+	}
+
+	void losingTime()
+	{
+
+	}
+
+	void flashLabel() 
+	{
+		displayLabel = true;
+		yield WaitForSeconds(2);
+		displayLabel = false;
+		yield WaitForSeconds(2); 
 	}
 }
 
